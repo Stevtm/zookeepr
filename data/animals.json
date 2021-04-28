@@ -135,6 +135,16 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Hippy Bippy",
+      "species": "Hippo",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry",
+        "goofy"
+      ],
+      "id": "14"
     }
   ]
 }
