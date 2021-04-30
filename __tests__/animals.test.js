@@ -8,6 +8,8 @@ const {
 } = require("../lib/animals");
 const { animals } = require("../data/animals.json");
 
+jest.mock("fs");
+
 test("creates an animal object", () => {
 	const animal = createNewAnimal(
 		{ name: "Darlene", id: "jhgdja3ng2" },
