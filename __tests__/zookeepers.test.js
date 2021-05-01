@@ -28,17 +28,19 @@ test("filters by query", () => {
 			id: "2",
 			name: "Raksha",
 			age: 31,
-			favoriteAnimal: "penguin",
+			favouriteAnimal: "penguin",
 		},
 		{
 			id: "3",
 			name: "Isabella",
 			age: 67,
-			favoriteAnimal: "bear",
+			favouriteAnimal: "bear",
 		},
 	];
 
 	const updatedZookeepers = filterByQuery({ age: 31 }, startingZookeepers);
+
+	expect(updatedZookeepers.length).toEqual(1);
 });
 
 test("finds by id", () => {
@@ -47,13 +49,13 @@ test("finds by id", () => {
 			id: "2",
 			name: "Raksha",
 			age: 31,
-			favoriteAnimal: "penguin",
+			favouriteAnimal: "penguin",
 		},
 		{
 			id: "3",
 			name: "Isabella",
 			age: 67,
-			favoriteAnimal: "bear",
+			favouriteAnimal: "bear",
 		},
 	];
 
@@ -67,14 +69,14 @@ test("validates age", () => {
 		id: "2",
 		name: "Raksha",
 		age: 31,
-		favoriteAnimal: "penguin",
+		favouriteAnimal: "penguin",
 	};
 
 	const invalidZookeeper = {
 		id: "3",
 		name: "Isabella",
 		age: "67",
-		favoriteAnimal: "bear",
+		favouriteAnimal: "bear",
 	};
 
 	const result = validateZookeeper(zookeeper);
