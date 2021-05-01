@@ -16,6 +16,7 @@ router.get("/animals", (req, res) => {
 
 	res.json(results);
 });
+
 router.get("/animals/:id", (req, res) => {
 	const result = findById(req.params.id, animals);
 	result ? res.json(result) : res.send(404);
